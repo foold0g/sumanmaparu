@@ -5,3 +5,6 @@ from django.http import HttpResponse
 def index(request):
   return HttpResponse("Resume - Suman Maparu")
 
+def bio(request, f_name):
+  return HttpResponse("You're viewing the resume of %s" % f_name)
+
