@@ -1,10 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
+from .models import Person
 
 # Create your views here.
 def index(request):
-  return HttpResponse("Resume - Suman Maparu")
+  person = Person.objects.get(id=1)
+  first_name = person.first_name
+  last_name = person.last_name
+  company = person.company
 
-def bio(request, f_name):
-  return HttpResponse("You're viewing the resume of %s" % f_name)
+  #template = loader.get_template('resume/index.html')
 
+  context = {
+    'first_name': first_name,
+    'last_name': last_name,
+    'company': company
+  }
+  return render(request, 'resume/index.html', context)
+
+def bio(request):
+  context = {
+    'first_name': first_name,
+  }
+  return render(request, 'resume/index.html', context)
