@@ -8,7 +8,7 @@
 
 # Cache files:
 sumanmaparu/resume/__pycache__/
-sumanmaparu/sumanmaparu/resume/__pycache__/
+sumanmaparu/sumanmaparu/__pycache__/
 
 ## File-based project format:
 *.iws
