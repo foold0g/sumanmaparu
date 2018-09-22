@@ -9,13 +9,14 @@ def index(request):
   first_name = person.first_name
   last_name = person.last_name
   company = person.company
-
+  profile_image = person.profile_image.url
   #template = loader.get_template('resume/index.html')
 
   context = {
     'first_name': first_name,
     'last_name': last_name,
-    'company': company
+    'company': company,
+    'profile_image': profile_image
   }
   return render(request, 'resume/index.html', context)
 
