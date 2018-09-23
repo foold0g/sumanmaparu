@@ -1,10 +1,85 @@
-{% block head %}
-    <title>Resume</title>
-{% endblock %}
+<!doctype html>
+<html lang="en">
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
-{% block body %}
-    <p align="center">
-       {{ first_name }} {{ last_name }} currently working at: {{ company }}
-    </p>
-    <img src="{{ profile_image }}" width="80px;" height="100px;">
-{% endblock %}
+        <title>Resume</title>
+    {% endblock %}
+
+    {% block body %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Profile</a>
+                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <!-- Column 1-->
+            <br><br>
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-2 ml-5">
+                            <img src="{{ profile_image }}" class="rounded float-left" width="90px;" height="100px;">
+                        </div>
+                        <div class="col-lg-7">
+                            <h2> {{ first_name }} {{ last_name }} </h2>
+                            <h6> {{ company }} </h6>
+                        </div>
+                    </div>
+                    <br><br> <!--Profile-->
+                    <div class="row">
+                        <div class="ml-5">
+                            <h2 class="ml-4">Profile</h2>
+                        </div>
+                        <div class="ml-5 pr-4" style="border-left: 1px solid; border-color:grey;">
+                            <p class="lead ml-4"> {{profile_description}} </p>
+                        </div>
+                    </div>
+                    <br><br> <!--Employment History-->
+                    <div class="row">
+                        <div class="ml-5">
+                            <h2 class="ml-4">Employment History</h2>
+                        </div>
+                        <div class="ml-5 pr-4" style="border-left: 1px solid; border-color:grey;">
+                            <p class="lead ml-4"> {{profile_description}} </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column 2-->
+                <div class="col-lg-3">
+                    <div class="row"  style="border-left: 1px solid; border-color:grey;">
+                        <div class="ml-4">
+                            <h5>Contact</h5>
+                        </div>
+                        <span class="ml-4 text-muted" style="width:100%">{{ house_number }} {{ street }}</span>
+                        <span class="ml-4 text-muted" style="width:100%">{{ area }}, {{ city }}</span>
+                        <span class="ml-4 text-muted" style="width:100%">{{ county }}, {{ post_code }}</span>
+                        <span class="ml-4 text-muted" style="width:100%">{{ country }}</span>
+                        <br>
+                        <span class="ml-4 text-muted" style="width:100%">{{ email }}</span>
+                        <span class="ml-4 text-muted" style="width:100%">{{ phone }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

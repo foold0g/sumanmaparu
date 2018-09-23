@@ -1,0 +1,10 @@
+{% block head %}
+    <title>Resume</title>
+{% endblock %}
+
+{% block body %}
+    <p align="center">
+       {{ first_name }} {{ last_name }} currently working at: {{ company }}
+    </p>
+    <img src="{{ profile_image }}" width="80px;" height="100px;">
+{% endblock %}
